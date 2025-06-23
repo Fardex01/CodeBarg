@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قوانین و مقررات کدبرگ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background-color: #f3f4f6;
+    }
+    h1 {
+      font-family: 'Vazir', sans-serif;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <!-- لوگو + متن وسط -->
+      <a href="index.html">
+        <div class="flex items-center space-x-3 space-x-reverse">
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="برنامه نویسی" class="w-8 h-8" />
+          <h1 class="text-2xl font-extrabold text-blue-600 tracking-wide">کدبرگ</h1>
+        </div>
+      </a>
+
+      <!-- ناوبری دسکتاپ -->
+      <nav class="hidden md:flex items-center space-x-6 space-x-reverse text-center mx-auto">
+        <a href="index.html" class="text-gray-700 font-medium hover:text-blue-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">خانه</a>
+        <a href="#languages" class="text-gray-700 font-medium hover:text-blue-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">زبان‌ها</a>
+        <a href="#editor" class="text-gray-700 font-medium hover:text-blue-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">ویرایشگر</a>
+        <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">تماس با ما</a>
+      </nav>
+
+      <!-- دکمه شروع دسکتاپ -->
+      <div class="hidden md:block">
+        <a href="search.html" class="mr-2 p-2 rounded-xl ml-3 bg-blue-600 hover:bg-blue-800 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-900">🔎</a>
+        <a href="login.html" class="bg-blue-600 text-white px-5 py-2 ml-3 rounded-full hover:bg-blue-800 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-900">ورود</a>
+        <a href="#start"
+          class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-md transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-900">شروع یادگیری</a>
+      </div>
+
+      <!-- منوی موبایل -->
+      <div class="md:hidden flex items-center">
+        <button id="menuBtn" class="text-3xl text-gray-700 focus:outline-none">☰</button>
+      </div>
+    </div>
+
+    <!-- منوی موبایل کشویی -->
+    <div id="mobileMenu"
+      class="md:hidden hidden px-6 pb-4 bg-white shadow-2xl flex flex-col items-center space-y-3 text-center">
+      <a href="#" class="block text-gray-700 font-medium hover:text-blue-600 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">خانه</a>
+      <a href="#languages" class="block text-gray-700 font-medium hover:text-blue-600 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">زبان‌ها</a>
+      <a href="#editor" class="block text-gray-700 font-medium hover:text-blue-600 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">ویرایشگر</a>
+      <a href="#contact" class="block text-gray-700 font-medium hover:text-blue-600 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-800">تماس با ما</a>
+      <a href="search.html" class="mr-2 p-2 rounded-xl bg-blue-800 hover:bg-blue-800 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-900">🔎</a>
+      <a href="login.html" class="block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-900">ورود</a>
+      <a href="#start" class="block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition delay-0 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-900">شروع یادگیری</a>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-center mb-10 text-blue-600 mt-16 mb-16 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-blue-900">قوانین و مقررات سایت کدبرگ</h2>
+
+    <div class="card transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+      <h3 class="text-xl font-semibold text-blue-600 mt-10">قانون اول: استفاده از خدمات</h3>
+      <p class="text-gray-600 mt-3">
+        کاربران باید از خدمات سایت کدران فقط برای اهداف قانونی استفاده کنند. استفاده از سایت برای اهداف غیرقانونی، تخریب، یا نقض حقوق دیگران ممنوع است.
+      </p>
+
+      <h3 class="text-xl font-semibold text-blue-600 mt-10">قانون دوم: حقوق مالکیت</h3>
+      <p class="text-gray-600 mt-3">
+        تمامی محتویات سایت، اعم از دوره‌ها، مقالات و سایر منابع آموزشی، متعلق به کدران است و هرگونه کپی یا استفاده از آن‌ها بدون اجازه کتبی غیرقانونی است.
+      </p>
+
+
+      <h3 class="text-xl font-semibold text-blue-600 mt-10">قانون سوم: حفظ حریم خصوصی</h3>
+      <p class="text-gray-600 mt-3">
+        اطلاعات شخصی کاربران تنها برای اهداف مرتبط با خدمات سایت و ارسال اطلاع‌رسانی‌های مرتبط جمع‌آوری می‌شود. ما اطلاعات شما را بدون اجازه به هیچ شخص ثالثی نمی‌دهیم.
+      </p>
+
+      <h3 class="text-xl font-semibold text-blue-600 mt-10">قانون چهارم: مسئولیت‌ها</h3>
+      <p class="text-gray-600 mt-3">
+        مسئولیت استفاده از محتوای سایت بر عهده کاربران است. کدران هیچ مسئولیتی در قبال مشکلات یا خسارات ناشی از استفاده نادرست از محتویات سایت ندارد.
+      </p>
+
+      <h3 class="text-xl font-semibold text-blue-600 mt-10">قانون پنجم: تغییرات در قوانین</h3>
+      <p class="text-gray-600 mt-3">
+        کدران این حق را دارد که در هر زمان قوانین و مقررات سایت را تغییر دهد. تمامی تغییرات از طریق اطلاع‌رسانی در سایت به کاربران اعلام خواهد شد.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
+    <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+
+      <!-- لوگو و توضیح -->
+      <div class="md:col-span-1">
+        <img src="images/favicon.png" alt="لوگو کدبرگ" class="w-24 mb-4">
+        <p class="text-gray-400 text-sm leading-6">
+          کدبرگ یک پلتفرم آموزشی برای یادگیری برنامه‌نویسی از مبتدی تا حرفه‌ای است.
+          با آموزش‌های پروژه‌محور و تمرین‌های کاربردی همراه ما شوید.
+        </p>
+      </div>
+
+      <!-- آموزش‌ها -->
+      <div>
+        <h4 class="text-white font-bold mb-4">آموزش‌ها</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-400">HTML</a></li>
+          <li><a href="#" class="hover:text-blue-400">CSS</a></li>
+          <li><a href="#" class="hover:text-blue-400">JavaScript</a></li>
+          <li><a href="#" class="hover:text-blue-400">Python</a></li>
+        </ul>
+      </div>
+
+      <!-- امکانات -->
+      <div>
+        <h4 class="text-white font-bold mb-4">امکانات</h4>
+        <ul class="space-y-2">
+          <li><a href="#editor" class="hover:text-blue-400">ویرایشگر آنلاین</a></li>
+          <li><a href="#certificates" class="hover:text-blue-400">مدارک</a></li>
+          <li><a href="#start" class="hover:text-blue-400">شروع رایگان</a></li>
+        </ul>
+      </div>
+
+      <!-- درباره ما -->
+      <div>
+        <h4 class="text-white font-bold mb-4">درباره ما</h4>
+        <ul class="space-y-2">
+          <li><a href="#contact" class="hover:text-blue-400">تماس با ما</a></li>
+          <li><a href="#" class="hover:text-blue-400">درباره کدبرگ</a></li>
+          <li><a href="#" class="hover:text-blue-400">پنل کاربری</a></li>
+        </ul>
+      </div>
+
+      <!-- شبکه‌های اجتماعی -->
+      <div>
+        <h4 class="text-white font-bold mb-4">ما را دنبال کنید</h4>
+        <div class="flex space-x-4 rtl:space-x-reverse">
+          <a href="#"><img src="/images/instagram.png" alt="Instagram" class="w-5 h-5 hover:opacity-80"></a>
+          <a href="#"><img src="/images/telegram.png" alt="Telegram" class="w-5 h-5 hover:opacity-80"></a>
+          <a href="#"><img src="/images/youtube.png" alt="YouTube" class="w-5 h-5 hover:opacity-80"></a>
+        </div>
+        <h4 class="text-white font-bold mt-16 mb-4">جستجو کنید :</h4>
+            <input type="text" placeholder="جستجو کنید..." class="p-1 w-1/2 text-lg text-gray-500 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700">
+            <a href="search.html" class="mr-2 bg-white p-2 rounded-xl">🔎</a>
+      </div>
+
+    </div>
+
+    <!-- زیرنویس -->
+    <div class="border-t border-gray-700 mt-10 pt-4 text-center text-xs text-gray-500">
+      <span class="text-gray-300 font-semibold">طراحی و ساخته شده با ❤ توسط تیم کدبرگ 👨‍💻☕</span>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript">
+    !function () { var i = "8hk3nv", a = window, d = document; function g() { var g = d.createElement("script"), s = "https://www.goftino.com/widget/" + i, l = localStorage.getItem("goftino_" + i); g.async = !0, g.src = l ? s + "?o=" + l : s; d.getElementsByTagName("head")[0].appendChild(g); } "complete" === d.readyState ? g() : a.attachEvent ? a.attachEvent("onload", g) : a.addEventListener("load", g, !1); }();
+  </script>
+</body>
+</html>
