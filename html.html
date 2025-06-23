@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دوره HTML | کدبرگ</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <!-- لوگو + متن وسط -->
+      <a href="../index.html">
+        <div class="flex items-center space-x-3 space-x-reverse">
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="برنامه نویسی" class="w-8 h-8" />
+          <h1 class="text-2xl font-extrabold text-blue-600 tracking-tight">کدبرگ</h1>
+        </div>
+      </a>
+
+      <!-- ناوبری دسکتاپ -->
+      <nav class="hidden md:flex items-center space-x-6 space-x-reverse text-center mx-auto">
+        <a href="../index.html" class="text-gray-700 font-medium hover:text-blue-600 transition">خانه</a>
+        <a href="#languages" class="text-gray-700 font-medium hover:text-blue-600 transition">زبان‌ها</a>
+        <a href="#editor" class="text-gray-700 font-medium hover:text-blue-600 transition">ویرایشگر</a>
+        <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600 transition">تماس با ما</a>
+        <a href="" class="text-gray-700 font-medium hover:text-blue-600 transition">پنل کاربری</a>
+      </nav>
+
+      <!-- دکمه شروع دسکتاپ -->
+      <div class="hidden md:block">
+        <a href="#start"
+          class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 shadow-md transition-all">شروع
+          یادگیری</a>
+      </div>
+
+      <!-- منوی موبایل -->
+      <div class="md:hidden flex items-center">
+        <button id="menuBtn" class="text-3xl text-gray-700 focus:outline-none">☰</button>
+      </div>
+    </div>
+
+    <!-- منوی موبایل کشویی -->
+    <div id="mobileMenu"
+      class="md:hidden hidden px-6 pb-4 bg-white shadow-inner flex flex-col items-center space-y-3 text-center">
+      <a href="../index.html" class="block text-gray-700 font-medium hover:text-blue-600 transition">خانه</a>
+      <a href="#languages" class="block text-gray-700 font-medium hover:text-blue-600 transition">زبان‌ها</a>
+      <a href="#editor" class="block text-gray-700 font-medium hover:text-blue-600 transition">ویرایشگر</a>
+      <a href="#contact" class="block text-gray-700 font-medium hover:text-blue-600 transition">تماس با ما</a>
+      <a href="#start" class="block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">شروع
+        یادگیری</a>
+    </div>
+  </header>
+  <div class="flex flex-1">
+    <!-- منوی سمت چپ -->
+    <aside class="w-64 bg-white border-l border-gray-200 p-4 overflow-y-auto">
+      <h2 class="text-xl font-bold mb-4 text-blue-600">سرفصل‌ها</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#intro" class="block p-2 rounded hover:bg-blue-100">مقدمه HTML</a></li>
+        <li><a href="#structure" class="block p-2 rounded hover:bg-blue-100">ساختار صفحات</a></li>
+        <li><a href="#tags" class="block p-2 rounded hover:bg-blue-100">تگ‌های پایه</a></li>
+        <li><a href="#attributes" class="block p-2 rounded hover:bg-blue-100">ویژگی‌ها (Attributes)</a></li>
+        <li><a href="#forms" class="block p-2 rounded hover:bg-blue-100">فرم‌ها در HTML</a></li>
+        <li><a href="#media" class="block p-2 rounded hover:bg-blue-100">رسانه (عکس، ویدیو)</a></li>
+        <li><a href="#practice" class="block p-2 rounded hover:bg-blue-100">تمرین‌ها</a></li>
+      </ul>
+    </aside>
+
+    <main class="flex-1 p-6 bg-gray-50 overflow-y-auto">
+      <section id="structure" class="mb-10">
+        <h2 class="text-xl font-semibold text-blue-500 mb-3">ساختار صفحات HTML</h2>
+        <p class="text-gray-700 leading-relaxed mb-2">هر فایل HTML با این ساختار کلی شروع می‌شود:</p>
+        <pre dir="ltr" class="rounded overflow-x-auto text-sm"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="fa"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;کدبرگ&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;کدبرگ&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <a href="editor.html?code=PGltZyBzcmM9ImltYWdlLmpwZyIgYWx0PSLZhNi52rYp2YXYsdmI2KkgIiAvPg=="
+          class="inline-block mt-2 px-4 py-1 bg-blue-600 text-white rounded hover:bg-blue-700" target="_blank"
+          rel="noopener noreferrer">ویرایش کد</a>
+          <div class="flex items-center justify-between h-screen">
+            <p class="text-red-500">متاسفانه هنوز آموزش متنی به اتمام نرسیده اگر تمایل دارید میتوانید اموزش ویدیویی ببینید.</p>
+            <a href="" class="inline-block mt-2 px-4 py-1 bg-red-600 text-white rounded hover:bg-red-700">آموزش ویدیویی</a>
+          </div>
+      </section>
+    </main>
+  </div>
+  <footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
+    <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+
+      <!-- لوگو و توضیح -->
+      <div class="md:col-span-1">
+        <img src="../images/favicon.png" alt="لوگو کدبرگ" class="w-24 mb-4">
+        <p class="text-gray-400 text-sm leading-6">
+          کدبرگ یک پلتفرم آموزشی برای یادگیری برنامه‌نویسی از مبتدی تا حرفه‌ای است.
+          با آموزش‌های پروژه‌محور و تمرین‌های کاربردی همراه ما شوید.
+        </p>
+      </div>
+
+      <!-- آموزش‌ها -->
+      <div>
+        <h4 class="text-white font-bold mb-4">آموزش‌ها</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-400">HTML</a></li>
+          <li><a href="#" class="hover:text-blue-400">CSS</a></li>
+          <li><a href="#" class="hover:text-blue-400">JavaScript</a></li>
+          <li><a href="#" class="hover:text-blue-400">Python</a></li>
+        </ul>
+      </div>
+
+      <!-- امکانات -->
+      <div>
+        <h4 class="text-white font-bold mb-4">امکانات</h4>
+        <ul class="space-y-2">
+          <li><a href="#editor" class="hover:text-blue-400">ویرایشگر آنلاین</a></li>
+          <li><a href="#certificates" class="hover:text-blue-400">مدارک</a></li>
+          <li><a href="#start" class="hover:text-blue-400">شروع رایگان</a></li>
+        </ul>
+      </div>
+
+      <!-- درباره ما -->
+      <div>
+        <h4 class="text-white font-bold mb-4">درباره ما</h4>
+        <ul class="space-y-2">
+          <li><a href="#contact" class="hover:text-blue-400">تماس با ما</a></li>
+          <li><a href="#" class="hover:text-blue-400">درباره کدبرگ</a></li>
+          <li><a href="#" class="hover:text-blue-400">پنل کاربری</a></li>
+        </ul>
+      </div>
+
+      <!-- شبکه‌های اجتماعی -->
+      <div>
+        <h4 class="text-white font-bold mb-4">ما را دنبال کنید</h4>
+        <div class="flex space-x-4 rtl:space-x-reverse">
+          <a href="#"><img src="/images/instagram.png" alt="Instagram" class="w-5 h-5 hover:opacity-80"></a>
+          <a href="#"><img src="/images/telegram.png" alt="Telegram" class="w-5 h-5 hover:opacity-80"></a>
+          <a href="#"><img src="/images/youtube.png" alt="YouTube" class="w-5 h-5 hover:opacity-80"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- زیرنویس -->
+    <div class="border-t border-gray-700 mt-10 pt-4 text-center text-xs text-gray-500">
+      <span class="text-gray-300 font-semibold">طراحی و ساخته شده با ❤ توسط تیم کدبرگ 👨‍💻☕</span>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    !function () { var i = "8hk3nv", a = window, d = document; function g() { var g = d.createElement("script"), s = "https://www.goftino.com/widget/" + i, l = localStorage.getItem("goftino_" + i); g.async = !0, g.src = l ? s + "?o=" + l : s; d.getElementsByTagName("head")[0].appendChild(g); } "complete" === d.readyState ? g() : a.attachEvent ? a.attachEvent("onload", g) : a.addEventListener("load", g, !1); }();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+</body>
+
+</html>
